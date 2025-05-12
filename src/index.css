@@ -3,45 +3,7 @@
 
 
 
-/* Custom Animations */
-@layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 1s ease-in-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(16px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-}
-
-/* Custom Button Styles (optional override) */
-@layer components {
-  .btn-primary {
-    @apply bg-primary-600 text-white font-semibold rounded-lg px-5 py-2 hover:bg-primary-700 transition;
-  }
-
-  .btn-outline {
-    @apply border border-gray-300 text-gray-700 rounded-lg px-5 py-2 hover:bg-gray-50 transition;
-  }
-}
-
-/* General Typography Tweaks */
-body {
-  @apply text-gray-800 antialiased bg-white;
-}
-
-h1, h2, h3 {
-  @apply font-bold text-gray-900;
-}
-
-
+/* Custom Theme using CSS variables (Tailwind v4-style) */
 @layer tokens {
   :root {
     /* Primary Colors */
@@ -129,3 +91,7 @@ h1, h2, h3 {
     animation: scaleIn 0.2s ease-out;
   }
 }
+
+
+
+

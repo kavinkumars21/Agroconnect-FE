@@ -455,11 +455,11 @@ const BuyerDashboard = () => {
       label: 'My Orders', 
       icon: <ShoppingBag className="h-5 w-5" /> 
     },
-    { 
-      path: '/buyer-dashboard/favorites', 
-      label: 'Favorite Farms', 
-      icon: <Heart className="h-5 w-5" /> 
-    },
+    // { 
+    //   path: '/buyer-dashboard/favorites', 
+    //   label: 'Favorite Farms', 
+    //   icon: <Heart className="h-5 w-5" /> 
+    // },
     { 
       path: '/buyer-dashboard/messages', 
       label: 'Messages', 

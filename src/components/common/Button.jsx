@@ -43,6 +43,50 @@
 // export default Button;
 
 
+// import React from 'react';
+
+// const Button = ({
+//   children,
+//   variant = 'primary',
+//   size = 'md',
+//   onClick,
+//   disabled = false,
+//   className = '',
+//   type = 'button',
+// }) => {
+//   const baseStyles =
+//     'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
+
+//   const variantStyles = {
+//     primary: 'bg-[var(--color-primary-600)] text-white hover:bg-[var(--color-primary-700)] focus:ring-[var(--color-primary-500)]',
+//     secondary: 'bg-[var(--color-secondary-600)] text-white hover:bg-[var(--color-secondary-700)] focus:ring-[var(--color-secondary-500)]',
+//     outline: 'bg-transparent border border-[var(--color-primary-600)] text-[var(--color-primary-600)] hover:bg-[var(--color-primary-50)] focus:ring-[var(--color-primary-500)]',
+//     danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500', // Optional: You can also define `--color-danger` set if you want
+//   };
+
+//   const sizeStyles = {
+//     sm: 'px-3 py-1.5 text-sm',
+//     md: 'px-4 py-2 text-base',
+//     lg: 'px-6 py-3 text-lg',
+//   };
+
+//   const disabledStyles = disabled
+//     ? 'opacity-50 cursor-not-allowed'
+//     : 'cursor-pointer transform hover:translate-y-[-1px] active:translate-y-[1px]';
+
+//   return (
+//     <button
+//       type={type}
+//       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${disabledStyles} ${className}`}
+//       onClick={onClick}
+//       disabled={disabled}
+//     >
+//       {children}
+//     </button>
+//   );
+// };
+
+// export default Button;
 import React from 'react';
 
 const Button = ({
@@ -58,10 +102,14 @@ const Button = ({
     'font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
   const variantStyles = {
-    primary: 'bg-[var(--color-primary-600)] text-white hover:bg-[var(--color-primary-700)] focus:ring-[var(--color-primary-500)]',
-    secondary: 'bg-[var(--color-secondary-600)] text-white hover:bg-[var(--color-secondary-700)] focus:ring-[var(--color-secondary-500)]',
-    outline: 'bg-transparent border border-[var(--color-primary-600)] text-[var(--color-primary-600)] hover:bg-[var(--color-primary-50)] focus:ring-[var(--color-primary-500)]',
-    danger: 'bg-red-600 text-white hover:bg-red-700 focus:ring-red-500', // Optional: You can also define `--color-danger` set if you want
+    primary:
+      'bg-[#16a34a] text-white hover:bg-[#15803d] focus:ring-[#22c55e]', // green
+    secondary:
+      'bg-[#2563eb] text-white hover:bg-[#1d4ed8] focus:ring-[#3b82f6]', // blue
+    outline:
+      'bg-transparent border border-[#16a34a] text-[#16a34a] hover:bg-[#f0fdf4] focus:ring-[#22c55e]', // green outline
+    danger:
+      'bg-[#dc2626] text-white hover:bg-[#b91c1c] focus:ring-[#ef4444]', // red
   };
 
   const sizeStyles = {
@@ -72,7 +120,7 @@ const Button = ({
 
   const disabledStyles = disabled
     ? 'opacity-50 cursor-not-allowed'
-    : 'cursor-pointer transform hover:translate-y-[-1px] active:translate-y-[1px]';
+    : 'cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0.5';
 
   return (
     <button
